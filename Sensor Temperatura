@@ -1,0 +1,17 @@
+void setup() {
+  pinMode(A0,INPUT);
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  float v,t=0;
+  delay(500);
+  v=analogRead(A0);
+  Serial.print("Numero de bits...");
+  Serial.println(v);
+  t=(v*69)/1023;
+  Serial.print("Temperatura...");
+  Serial.println(t);
+
+}
